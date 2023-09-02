@@ -1,6 +1,6 @@
 # "dd-cache-proxy" v19 example
 
-This is an example of how to use [dd-cache-proxy v19](https://github.com/real2two/dd-cache-proxy).
+This is an example of how to add caching in discordeno v19 using [dd-cache-proxy v19](https://github.com/real2two/dd-cache-proxy).
 
 v19 PR: https://github.com/AwesomeStickz/dd-cache-proxy/pull/4
 
