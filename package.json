@@ -1,0 +1,13 @@
+{
+	"type": "module",
+	"scripts": {
+		"start": "node --no-warnings=ExperimentalWarning --loader ts-node/esm --experimental-specifier-resolution=node -r ts-node/register -r dotenv/config src/index.ts"
+	},
+	"dependencies": {
+		"@discordeno/bot": "19.0.0-next.ceb3d4d",
+		"dd-cache-proxy": "github:real2two/dd-cache-proxy",
+		"dotenv": "^16.3.1",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.2.2"
+	}
+}
