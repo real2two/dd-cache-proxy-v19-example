@@ -29,7 +29,6 @@ const getProxyCacheBot = (bot: Bot) =>
         // @ts-ignore
         getItem: async (table, id, guildId) => {
             if (table === 'members') return outsideMemoryDatabase.members[guildId.toString()]?.[id.toString()];
-            throw new Error('This should not be reaching here');
         },
         setItem: async (table, item) => {
             if (table === 'members') {
@@ -38,6 +37,10 @@ const getProxyCacheBot = (bot: Bot) =>
                 guild[item.id] = item;
             }
         },
+        // @ts-ignore
+        removeItem: async (table, id, guildId) => {
+            if (table === 'members') delete outsideMemoryDatabase.members[guildId.toString()][id.toString()];
+        }
     });
 
 const bot = getProxyCacheBot(
@@ -64,7 +67,7 @@ const bot = getProxyCacheBot(
 
             guildMemberAdd: async member => console.log('member add', await bot.cache.members.get(member.id, member.guildId)),
             guildMemberUpdate: async member => console.log('member update', await bot.cache.members.get(member.id, member.guildId)),
-            guildMemberRemove: async (user, guildId) => console.log('member removed (should be undefined ->)', await bot.cache.members.get(user.id, guildId)),
+            guildMemberRemove: async (user, guildId) => setTimeout(async () => console.log('member removed (should be undefined ->)', await bot.cache.members.get(user.id, guildId)), 10), // I added a setTimeout() here, because the value wasn't undefined... since using outsideMemory is 'slower'
         }
     })
 );
