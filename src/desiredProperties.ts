@@ -52,6 +52,7 @@ export function addDesiredProperties(bot: Bot) {
   bot.transformers.desiredProperties.guild.approximateMemberCount = true;
   bot.transformers.desiredProperties.guild.approximatePresenceCount = true;
   bot.transformers.desiredProperties.guild.banner = true;
+  bot.transformers.desiredProperties.guild.channels = true;
   bot.transformers.desiredProperties.guild.defaultMessageNotifications = true;
   bot.transformers.desiredProperties.guild.description = true;
   bot.transformers.desiredProperties.guild.discoverySplash = true;
@@ -62,6 +63,7 @@ export function addDesiredProperties(bot: Bot) {
   bot.transformers.desiredProperties.guild.maxMembers = true;
   bot.transformers.desiredProperties.guild.maxPresences = true;
   bot.transformers.desiredProperties.guild.maxVideoChannelUsers = true;
+  bot.transformers.desiredProperties.guild.members = true;
   bot.transformers.desiredProperties.guild.memberCount = true;
   bot.transformers.desiredProperties.guild.mfaLevel = true;
   bot.transformers.desiredProperties.guild.name = true;
@@ -73,6 +75,7 @@ export function addDesiredProperties(bot: Bot) {
   bot.transformers.desiredProperties.guild.premiumSubscriptionCount = true;
   bot.transformers.desiredProperties.guild.premiumTier = true;
   bot.transformers.desiredProperties.guild.publicUpdatesChannelId = true;
+  bot.transformers.desiredProperties.guild.roles = true;
   bot.transformers.desiredProperties.guild.rulesChannelId = true;
   bot.transformers.desiredProperties.guild.shardId = true;
   bot.transformers.desiredProperties.guild.splash = true;
