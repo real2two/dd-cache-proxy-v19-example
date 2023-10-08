@@ -9,8 +9,8 @@ dependencies:
     specifier: ^19.0.0-next.730ad9a
     version: 19.0.0-next.730ad9a
   dd-cache-proxy:
-    specifier: github:real2two/dd-cache-proxy
-    version: github.com/real2two/dd-cache-proxy/d36827386a0148fee7c91393685d41133e184496
+    specifier: ^2.0.1
+    version: 2.0.1
   dotenv:
     specifier: ^16.3.1
     version: 16.3.1
@@ -127,6 +127,17 @@ packages:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
     dev: false
 
+  /dd-cache-proxy@2.0.1:
+    resolution: {integrity: sha512-oa05T4E3ZVG6VOC7XOVyrM/J2VhuGkvS4S/pOksbvHQ1tpk7+MgPTf9FFC7hfmIbh+YTiB5LNsf7oS6ZvGCAVA==}
+    requiresBuild: true
+    dependencies:
+      '@discordeno/bot': 19.0.0-next.730ad9a
+      typescript: 4.9.5
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: false
+
   /diff@4.0.2:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
     engines: {node: '>=0.3.1'}
@@ -208,19 +219,4 @@ packages:
   /yn@3.1.1:
     resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==}
     engines: {node: '>=6'}
-    dev: false
-
-  github.com/real2two/dd-cache-proxy/d36827386a0148fee7c91393685d41133e184496:
-    resolution: {tarball: https://codeload.github.com/real2two/dd-cache-proxy/tar.gz/d36827386a0148fee7c91393685d41133e184496}
-    name: dd-cache-proxy
-    version: 1.0.0
-    prepare: true
-    requiresBuild: true
-    dependencies:
-      '@discordeno/bot': 19.0.0-next.730ad9a
-      '@discordeno/utils': 19.0.0-next.730ad9a
-      typescript: 4.9.5
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
     dev: false
